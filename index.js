@@ -14,10 +14,10 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 var students = /** @class */ (function () {
-    function students(stud_name, stud_age, stud_gender, stud_nation) {
+    function students(stud_name, stud_age, stud_nation) {
         this.name = stud_name;
         this.age = stud_age;
-        this.gender = stud_gender;
+        this.gender = "Female";
         this.nationality = stud_nation;
     }
     students.prototype.getNationality = function () {
@@ -27,8 +27,8 @@ var students = /** @class */ (function () {
 }());
 var undergrad = /** @class */ (function (_super) {
     __extends(undergrad, _super);
-    function undergrad(stud_name, stud_age, stud_gender, stud_nation, under_batch, stud_type, stud_gpa) {
-        var _this = _super.call(this, stud_name, stud_age, stud_gender, stud_nation) || this;
+    function undergrad(stud_name, stud_age, stud_nation, under_batch, stud_type, stud_gpa) {
+        var _this = _super.call(this, stud_name, stud_age, stud_nation) || this;
         _this.batch = under_batch;
         _this.type = stud_type;
         _this.gpa = stud_gpa;
@@ -36,16 +36,9 @@ var undergrad = /** @class */ (function (_super) {
     }
     return undergrad;
 }(students));
-var student1 = new students("Wendy Brader", 54, "Female", "American");
-var student2 = new students("Mary Tavish", 26, "Female", "Spanish");
-// let manystudents:students[] = [
-//     {name:"Wendy Brader", age: 54, gender: "Female", nationality: "American"},
-//     {name: "Jane Weber", age: 15, gender: "Female", nationality: "Canadian"},
-//     {name: "Melanie Liberte", age: 42, gender: "Female", nationality: "French"},
-//     {name: "Melissa Luga", age:62, gender: "Female", nationality: "Polish"},
-//     {name: "Danielle Delmar", age: 22, gender: "Female", nationality: "Spanish"},
-// ]
-var undergrad1 = new undergrad("Victoria", 45, "Female", "Canadian", "Secondary", 5, 87);
+var student1 = new students("Wendy Brader", 54, "American");
+var student2 = new students("Mary Tavish", 26, "Spanish");
+var undergrad1 = new undergrad("Victoria", 45, "Female", "Canadian", 76, 87);
 console.log(student1.getNationality());
 console.log(student2.getNationality());
 console.log(undergrad1.getNationality());
